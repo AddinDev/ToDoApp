@@ -33,7 +33,7 @@ struct ContentView: View {
                 ScrollView(showsIndicators: false) {
                     VStack {
                         LazyVGrid(columns: columns, spacing: 20) {
-//                    List {
+                            //                    List {
                             ForEach(low ? filterLow : filterHigh) { task in
                                 TaskItem(task: task)
                                     .contextMenu {
@@ -47,10 +47,10 @@ struct ContentView: View {
                             }.onDelete(perform: removeT)
                         }
                     }
-                    }
+                }
                 .padding()
-                    Spacer()
-//                }
+                Spacer()
+                //                }
                 VStack {
                     Spacer()
                     HStack {
@@ -77,7 +77,7 @@ struct ContentView: View {
                                         Button("Priority High") {
                                             self.low = false
                                         }
-
+                                        
                                         Button("Priority Low") {
                                             self.low = true
                                         }
